@@ -3,7 +3,7 @@
 #------------------------------------------------
 # for single value, return value as string. For vector of values return string
 # of comma-separated values enclosed in curly brackets
-#' @noRd
+#' @export
 nice_format <- function(x) {
   if (is.null(x)) {
     return("")
@@ -21,7 +21,7 @@ nice_format <- function(x) {
 
 #------------------------------------------------
 # x is NULL
-#' @noRd
+#' @export
 assert_null <- function(x, message = NULL,
                         name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -37,7 +37,7 @@ assert_null <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is not NULL
-#' @noRd
+#' @export
 assert_non_null <- function(x, message = NULL,
                             name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -53,7 +53,7 @@ assert_non_null <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is NA
-#' @noRd
+#' @export
 assert_NA <- function(x, message = NULL,
                       name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -70,7 +70,7 @@ assert_NA <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is not NA
-#' @noRd
+#' @export
 assert_non_NA <- function(x, message = NULL,
                           name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -86,7 +86,7 @@ assert_non_NA <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is atomic
-#' @noRd
+#' @export
 assert_atomic <- function(x, message = NULL,
                           name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -102,7 +102,7 @@ assert_atomic <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is character string
-#' @noRd
+#' @export
 assert_string <- function(x, message = NULL,
                           name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -118,7 +118,7 @@ assert_string <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is logical
-#' @noRd
+#' @export
 assert_logical <- function(x, message = NULL,
                            name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -134,7 +134,7 @@ assert_logical <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is numeric
-#' @noRd
+#' @export
 assert_numeric <- function(x, message = NULL,
                            name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -150,7 +150,7 @@ assert_numeric <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is integer
-#' @noRd
+#' @export
 assert_int <- function(x, message = NULL,
                        name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -167,7 +167,7 @@ assert_int <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is integer and within C++ int limits
-#' @noRd
+#' @export
 assert_cpp_int <- function(x, message = NULL,
                            name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -183,7 +183,7 @@ assert_cpp_int <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is positive (with or without zero allowed)
-#' @noRd
+#' @export
 assert_pos <- function(x, zero_allowed = TRUE, message = NULL,
                        name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -210,7 +210,7 @@ assert_pos <- function(x, zero_allowed = TRUE, message = NULL,
 
 #------------------------------------------------
 # x is a vector (and is not a list or another recursive type)
-#' @noRd
+#' @export
 assert_vector <- function(x, message = NULL,
                           name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -226,7 +226,7 @@ assert_vector <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is a matrix
-#' @noRd
+#' @export
 assert_matrix <- function(x, message = NULL,
                           name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -307,7 +307,7 @@ assert_class <- function(x, c, message = NULL,
 
 #------------------------------------------------
 # x is atomic and single valued (has length 1)
-#' @noRd
+#' @export
 assert_single <- function(x, message = NULL,
                           name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -324,7 +324,7 @@ assert_single <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is single character string
-#' @noRd
+#' @export
 assert_single_string <- function(x, message = NULL,
                                  name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -340,7 +340,7 @@ assert_single_string <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is single logical
-#' @noRd
+#' @export
 assert_single_logical <- function(x, message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -356,7 +356,7 @@ assert_single_logical <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is single numeric
-#' @noRd
+#' @export
 assert_single_numeric <- function(x, message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -372,7 +372,7 @@ assert_single_numeric <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is single integer
-#' @noRd
+#' @export
 assert_single_int <- function(x, message = NULL,
                               name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -388,7 +388,7 @@ assert_single_int <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is single integer and within C++ int limits
-#' @noRd
+#' @export
 assert_single_cpp_int <- function(x, message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -405,7 +405,7 @@ assert_single_cpp_int <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is single positive (with or without zero allowed)
-#' @noRd
+#' @export
 assert_single_pos <- function(x, zero_allowed = TRUE, message = NULL,
                               name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -425,7 +425,7 @@ assert_single_pos <- function(x, zero_allowed = TRUE, message = NULL,
 
 #------------------------------------------------
 # x is positive integer (with or without zero allowed)
-#' @noRd
+#' @export
 assert_pos_int <- function(x, zero_allowed = TRUE, message = NULL,
                            name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -445,7 +445,7 @@ assert_pos_int <- function(x, zero_allowed = TRUE, message = NULL,
 
 #------------------------------------------------
 # x is positive integer (with or without zero allowed) and within C++ int limits
-#' @noRd
+#' @export
 assert_pos_cpp_int <- function(x, zero_allowed = TRUE, message = NULL,
                                name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -466,7 +466,7 @@ assert_pos_cpp_int <- function(x, zero_allowed = TRUE, message = NULL,
 
 #------------------------------------------------
 # x is single positive integer (with or without zero allowed)
-#' @noRd
+#' @export
 assert_single_pos_int <- function(x, zero_allowed = TRUE, message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -486,7 +486,7 @@ assert_single_pos_int <- function(x, zero_allowed = TRUE, message = NULL,
 
 #------------------------------------------------
 # x is single positive integer (with or without zero allowed) and within C++ int limits
-#' @noRd
+#' @export
 assert_single_pos_cpp_int <- function(x, zero_allowed = TRUE, message = NULL,
                                       name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -506,7 +506,7 @@ assert_single_pos_cpp_int <- function(x, zero_allowed = TRUE, message = NULL,
 
 #------------------------------------------------
 # x is single value bounded between limits
-#' @noRd
+#' @export
 assert_single_bounded <- function(x, left = 0, right = 1, inclusive_left = TRUE, inclusive_right = TRUE,
                                   message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
@@ -526,7 +526,7 @@ assert_single_bounded <- function(x, left = 0, right = 1, inclusive_left = TRUE,
 
 #------------------------------------------------
 # x is a logical (boolean) vector
-#' @noRd
+#' @export
 assert_vector_logical <- function(x, message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -542,7 +542,7 @@ assert_vector_logical <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is a numeric vector
-#' @noRd
+#' @export
 assert_vector_numeric <- function(x, message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -558,7 +558,7 @@ assert_vector_numeric <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is a vector of integers
-#' @noRd
+#' @export
 assert_vector_int <- function(x, message = NULL,
                               name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -574,7 +574,7 @@ assert_vector_int <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is a vector of positive values
-#' @noRd
+#' @export
 assert_vector_pos <- function(x, zero_allowed = TRUE,
                               message = NULL,
                               name = paste(deparse(substitute(x)), collapse = "")) {
@@ -595,7 +595,7 @@ assert_vector_pos <- function(x, zero_allowed = TRUE,
 
 #------------------------------------------------
 # x is a vector of positive integers
-#' @noRd
+#' @export
 assert_vector_pos_int <- function(x, zero_allowed = TRUE,
                                   message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
@@ -617,7 +617,7 @@ assert_vector_pos_int <- function(x, zero_allowed = TRUE,
 
 #------------------------------------------------
 # x is a vector of bounded values
-#' @noRd
+#' @export
 assert_vector_bounded <- function(x, left = 0, right = 1, inclusive_left = TRUE, inclusive_right = TRUE,
                                   message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
@@ -637,7 +637,7 @@ assert_vector_bounded <- function(x, left = 0, right = 1, inclusive_left = TRUE,
 
 #------------------------------------------------
 # x is a vector of strings
-#' @noRd
+#' @export
 assert_vector_string <- function(x, message = NULL,
                                  name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -653,7 +653,7 @@ assert_vector_string <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is a matrix of numeric values
-#' @noRd
+#' @export
 assert_matrix_numeric <- function(x, message = NULL,
                                   name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -704,7 +704,7 @@ assert_limit <- function(x, message = NULL,
 
 #------------------------------------------------
 # x and y are equal in all matched comparisons. x and y can be any type
-#' @noRd
+#' @export
 assert_eq <- function(x, y, message = NULL,
                       name_x = paste(deparse(substitute(x)), collapse = ""), name_y = nice_format(y)) {
   # default message
@@ -723,7 +723,7 @@ assert_eq <- function(x, y, message = NULL,
 
 #------------------------------------------------
 # x and y are unequal in all matched comparisons. x and y can be any type
-#' @noRd
+#' @export
 assert_neq <- function(x, y, message = NULL,
                        name_x = paste(deparse(substitute(x)), collapse = ""), name_y = nice_format(y)) {
   # default message
@@ -742,7 +742,7 @@ assert_neq <- function(x, y, message = NULL,
 
 #------------------------------------------------
 # x is greater than y in all matched comparisons
-#' @noRd
+#' @export
 assert_gr <- function(x, y, message = NULL,
                       name_x = paste(deparse(substitute(x)), collapse = ""),
                       name_y = nice_format(y)) {
@@ -762,7 +762,7 @@ assert_gr <- function(x, y, message = NULL,
 
 #------------------------------------------------
 # x is greater than or equal to y in all matched comparisons
-#' @noRd
+#' @export
 assert_greq <- function(x, y, message = NULL,
                         name_x = paste(deparse(substitute(x)), collapse = ""),
                         name_y = nice_format(y)) {
@@ -782,7 +782,7 @@ assert_greq <- function(x, y, message = NULL,
 
 #------------------------------------------------
 # x is less than y in all matched comparisons
-#' @noRd
+#' @export
 assert_le <- function(x, y, message = NULL,
                       name_x = paste(deparse(substitute(x)), collapse = ""),
                       name_y = nice_format(y)) {
@@ -802,7 +802,7 @@ assert_le <- function(x, y, message = NULL,
 
 #------------------------------------------------
 # x is less than or equal to y in all matched comparisons
-#' @noRd
+#' @export
 assert_leq <- function(x, y, message = NULL,
                        name_x = paste(deparse(substitute(x)), collapse = ""),
                        name_y = nice_format(y)) {
@@ -822,7 +822,7 @@ assert_leq <- function(x, y, message = NULL,
 
 #------------------------------------------------
 # x is between bounds (inclusive or exclusive)
-#' @noRd
+#' @export
 assert_bounded <- function(x, left = 0, right = 1, inclusive_left = TRUE, inclusive_right = TRUE,
                            message = NULL,
                            name = paste(deparse(substitute(x)), collapse = "")) {
@@ -842,7 +842,7 @@ assert_bounded <- function(x, left = 0, right = 1, inclusive_left = TRUE, inclus
 
 #------------------------------------------------
 # all x are in y
-#' @noRd
+#' @export
 assert_in <- function(x, y, message = NULL,
                       name_x = paste(deparse(substitute(x)), collapse = ""), name_y = nice_format(y)) {
   # default message
@@ -860,7 +860,7 @@ assert_in <- function(x, y, message = NULL,
 
 #------------------------------------------------
 # none of x are in y
-#' @noRd
+#' @export
 assert_not_in <- function(x, y, message = NULL,
                           name_x = paste(deparse(substitute(x)), collapse = ""), name_y = nice_format(y)) {
   # default message
@@ -881,7 +881,7 @@ assert_not_in <- function(x, y, message = NULL,
 
 #------------------------------------------------
 # length(x) equals n
-#' @noRd
+#' @export
 assert_length <- function(x, n, message = NULL,
                           name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -898,7 +898,7 @@ assert_length <- function(x, n, message = NULL,
 
 #------------------------------------------------
 # x and y are same length
-#' @noRd
+#' @export
 assert_same_length <- function(x, y, message =  NULL,
                                name_x = paste(deparse(substitute(x)), collapse = ""),
                                name_y = paste(deparse(substitute(y)))) {
@@ -915,7 +915,7 @@ assert_same_length <- function(x, y, message =  NULL,
 
 #------------------------------------------------
 # multiple objects all same length
-#' @noRd
+#' @export
 assert_same_length_multiple <- function(...) {
   l <- mapply(length, list(...))
   if (length(unique(l)) != 1) {
@@ -927,7 +927,7 @@ assert_same_length_multiple <- function(...) {
 
 #------------------------------------------------
 # x is two-dimensional
-#' @noRd
+#' @export
 assert_2d <- function(x, message = NULL,
                       name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -947,7 +947,7 @@ assert_2d <- function(x, message = NULL,
 
 #------------------------------------------------
 # nrow(x) equals n
-#' @noRd
+#' @export
 assert_nrow <- function(x, n, message = NULL,
                         name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -964,7 +964,7 @@ assert_nrow <- function(x, n, message = NULL,
 
 #------------------------------------------------
 # ncol(x) equals n
-#' @noRd
+#' @export
 assert_ncol <- function(x, n, message = NULL,
                         name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -981,7 +981,7 @@ assert_ncol <- function(x, n, message = NULL,
 
 #------------------------------------------------
 # dim(x) equals y
-#' @noRd
+#' @export
 assert_dim <- function(x, y, message = NULL,
                        name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -1000,7 +1000,7 @@ assert_dim <- function(x, y, message = NULL,
 
 #------------------------------------------------
 # x is square matrix
-#' @noRd
+#' @export
 assert_square_matrix <- function(x, message = NULL,
                                  name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -1017,7 +1017,7 @@ assert_square_matrix <- function(x, message = NULL,
 
 #------------------------------------------------
 # is symmetric matrix
-#' @noRd
+#' @export
 assert_symmetric_matrix <- function(x, message = NULL,
                                     name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -1036,7 +1036,7 @@ assert_symmetric_matrix <- function(x, message = NULL,
 
 #------------------------------------------------
 # x contains no duplicates
-#' @noRd
+#' @export
 assert_noduplicates <- function(x, message = NULL,
                                 name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -1052,7 +1052,7 @@ assert_noduplicates <- function(x, message = NULL,
 
 #------------------------------------------------
 # file exists at chosen path
-#' @noRd
+#' @export
 assert_file_exists <- function(x, message = NULL,
                                name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -1069,7 +1069,7 @@ assert_file_exists <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is increasing
-#' @noRd
+#' @export
 assert_increasing <- function(x, message = NULL,
                               name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -1087,7 +1087,7 @@ assert_increasing <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is decreasing
-#' @noRd
+#' @export
 assert_decreasing <- function(x, message = NULL,
                               name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
