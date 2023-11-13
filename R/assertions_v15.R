@@ -242,6 +242,7 @@ assert_matrix <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is a list
+#' @export
 assert_list <- function(x, message = NULL,
                         name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -257,6 +258,7 @@ assert_list <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is named
+#' @export
 assert_named <- function(x, message = NULL,
                          name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -272,6 +274,7 @@ assert_named <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is a data frame
+#' @export
 assert_dataframe <- function(x, message = NULL,
                              name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -287,6 +290,7 @@ assert_dataframe <- function(x, message = NULL,
 
 #------------------------------------------------
 # x inherits from class c
+#' @export
 assert_class <- function(x, c, message = NULL,
                          name = paste(deparse(substitute(x)), collapse = "")) {
   # default message
@@ -684,6 +688,7 @@ assert_list_named <- function(x, message = NULL,
 
 #------------------------------------------------
 # x is a plotting limit, i.e. contains two increasing values
+#' @export
 assert_limit <- function(x, message = NULL,
                          name = paste(deparse(substitute(x)), collapse = "")) {
 
@@ -1102,3 +1107,5 @@ assert_decreasing <- function(x, message = NULL,
   }
   return(TRUE)
 }
+
+
