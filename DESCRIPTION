@@ -1,16 +1,20 @@
 Package: goodegg
-Title: What the Package Does (One Line, Title Case)
+Title: Utilities for Rigorous and Reproducible R Projects
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Authors@R:
+    person("Nicholas", "Brazeau", email = "hidden@duke.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3976-7965"))
+Description: Provides tools to support rigorous and reproducible research in R.
+    Includes a comprehensive set of runtime assertion functions for validating
+    inputs and intermediate objects, as well as utilities for scaffolding new
+    projects and packages with a consistent structure.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
-LinkingTo: 
+RoxygenNote: 7.3.3
+LinkingTo:
     Rcpp
-Imports: 
+Imports:
     Rcpp
+Suggests:
+    usethis (>= 2.0.0)
